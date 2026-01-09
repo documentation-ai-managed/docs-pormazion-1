@@ -1,0 +1,148 @@
+---
+title: Exploring PORMAZION Features
+description: Dive into the advanced capabilities of PORMAZION for enhancing your documentation workflow, including search, templates, and team permissions.
+---
+
+## Overview
+
+PORMAZION offers powerful features to streamline your documentation workflow. You gain access to advanced search tools, reusable templates, flexible team permissions, easy exporting options, and full customization control. These capabilities help you maintain consistent, secure, and branded documentation spaces.
+
+<Columns cols={3}>
+  <Card title="Advanced Search" icon="search" href="#advanced-search">
+    Find content quickly with filters and full-text search.
+  </Card>
+  <Card title="Templates" icon="file-text" href="#templates">
+    Create consistent docs using predefined templates.
+  </Card>
+  <Card title="Permissions" icon="shield" href="#permissions">
+    Control access for teams and collaborators.
+  </Card>
+  <Card title="Exporting" icon="download" href="#exporting">
+    Share your docs in multiple formats.
+  </Card>
+  <Card title="Customization" icon="palette" href="#customization">
+    Brand your space with custom layouts.
+  </Card>
+</Columns>
+
+## Advanced Search and Filtering
+
+PORMAZION's search goes beyond basic keywords. You can filter by tags, dates, authors, and sections. Use the search bar at the top of your dashboard to query across all documents.
+
+<Tabs>
+  <Tab title="Basic Search" icon="search">
+    Enter keywords like `API integration` to find relevant pages.
+  </Tab>
+  <Tab title="Advanced Filters" icon="filter">
+    Combine filters:
+    
+    - Tags: `feature` or `bugfix`
+    - Date range: Last 30 days
+    - Author: Specific team member
+  </Tab>
+</Tabs>
+
+<Callout kind="tip">
+  Pro tip: Use quotes for exact phrases, like `"user authentication"`, and boolean operators such as `AND`, `OR`.
+</Callout>
+
+## Using Templates for Consistent Docs
+
+Templates ensure every new document follows your standards. Create them in the Templates section of your workspace.
+
+<CodeGroup tabs="YAML,JSON">
+  ```yaml
+  title: "API Reference"
+  sections:
+    - name: "Endpoint"
+      fields:
+        - path: method
+          type: string
+        - path: url
+          type: string
+  sidebar: true
+  ```
+  ```json
+  {
+    "title": "API Reference",
+    "sections": [
+      {
+        "name": "Endpoint",
+        "fields": [
+          {"path": "method", "type": "string"},
+          {"path": "url", "type": "string"}
+        ]
+      }
+    ],
+    "sidebar": true
+  }
+  ```
+</CodeGroup>
+
+To apply a template, select it when creating a new page.
+
+## Setting Up Team Permissions
+
+Manage who can view, edit, or admin your docs with granular controls.
+
+<Steps>
+  <Step title="Navigate to Settings" icon="settings">
+    Go to Workspace `{settings}` > `{permissions}`.
+  </Step>
+  <Step title="Add Users" icon="users">
+    Invite team members by email.
+  </Step>
+  <Step title="Assign Roles" icon="shield">
+    Choose from Viewer, Editor, or Admin.
+    
+    ```
+    Viewer: Read only
+    Editor: Edit content
+    Admin: Manage users and settings
+    ```
+  </Step>
+  <Step title="Apply to Sections" icon="folder">
+    Set permissions per folder or page.
+  </Step>
+</Steps>
+
+## Exporting and Sharing Documentation
+
+Export your entire space or specific pages in formats like PDF, HTML, or Markdown.
+
+<Tabs>
+  <Tab title="PDF Export" icon="file-text">
+    ```
+    1. Select pages
+    2. Choose PDF
+    3. Download
+    ```
+  </Tab>
+  <Tab title="Public Sharing" icon="share-2">
+    Generate shareable links with optional passwords.
+  </Tab>
+</Tabs>
+
+## Customizing Layouts and Branding
+
+Tailor your documentation to match your brand. Update colors, logos, and layouts in the Branding panel.
+
+<Expandable title="Advanced CSS Customization" default-open="false">
+  Add custom styles via the theme config:
+  
+  ```css
+  :root {
+    --primary-color: #3B82F6;
+  }
+  
+  .sidebar {
+    background: var(--primary-color);
+  }
+  ```
+  
+  Preview changes live before saving.
+</Expandable>
+
+<Callout kind="success">
+  Ready to implement? Start with templates for quick wins, then layer on permissions and custom branding.
+</Callout>

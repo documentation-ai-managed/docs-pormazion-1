@@ -1,0 +1,142 @@
+---
+title: Getting Started with PORMAZION
+description: Follow these steps to set up your PORMAZION account, create your first documentation space, and begin organizing your project docs in minutes.
+---
+
+## Prerequisites
+
+Before you begin, ensure you have:
+
+- A modern web browser like Chrome, Firefox, or Safari
+- An email address for account verification
+- Optional: Existing documentation files in Markdown or HTML format
+
+<Callout kind="info">
+
+PORMAZION works entirely in your browser. No downloads or installations required.
+
+</Callout>
+
+## Create Your PORMAZION Account
+
+Sign up in under a minute.
+
+<Steps>
+  <Step title="Visit the Dashboard" icon="monitor">
+    Navigate to `https://dashboard.example.com` and click **Sign Up**.
+  </Step>
+  <Step title="Enter Your Details" icon="user">
+    Provide your email, name, and a strong password. Accept the terms.
+  </Step>
+  <Step title="Verify Email" icon="mail">
+    Check your inbox for the verification link and click it to activate your account.
+  </Step>
+  <Step title="Log In" icon="log-in">
+    Return to the dashboard and sign in with your credentials.
+  </Step>
+</Steps>
+
+## Create Your First Documentation Space
+
+Organize your project docs into a dedicated space.
+
+<Steps>
+  <Step title="Click New Space" icon="plus">
+    From the dashboard, select **New Space**.
+  </Step>
+  <Step title="Name Your Space" icon="edit-3">
+    Enter a name like `My Project Docs` and choose a description.
+  </Step>
+  <Step title="Customize Settings" icon="settings">
+    Set visibility (public or private) and add team members if needed.
+  </Step>
+  <Step title="Create Space" icon="check-circle">
+    Click **Create** to generate your space. You'll land on the editor homepage.
+  </Step>
+</Steps>
+
+## Add Your First Pages
+
+You can create pages manually or upload files.
+
+<Tabs>
+  <Tab title="Create New Page" icon="file-plus">
+
+    1. Click **New Page** in your space.
+    2. Choose a title like `Introduction`.
+    3. Start editing in the visual MDX editor.
+
+    <Callout kind="tip">
+
+      Use the built-in preview to see changes live.
+
+    </Callout>
+
+  </Tab>
+  <Tab title="Upload File" icon="upload">
+
+    Drag and drop Markdown (`.mdx`, `.md`) or HTML files directly into your space.
+
+    Supported formats:
+    | Format | Extension | Notes |
+    |--------|-----------|-------|
+    | MDX    | `.mdx`   | Full component support |
+    | Markdown | `.md` | Converts automatically |
+    | HTML   | `.html`  | Strips scripts for security |
+
+  </Tab>
+</Tabs>
+
+## Quick Interface Tour
+
+Familiarize yourself with the key areas.
+
+<Columns cols={3}>
+  <Card title="Editor" icon="edit-3" href="#editor">
+    Write and preview MDX content with live rendering.
+  </Card>
+  <Card title="Navigation" icon="menu" href="#navigation">
+    Sidebar tree for pages and spaces.
+  </Card>
+  <Card title="Publish" icon="globe" href="#publish">
+    One-click deploy to custom domains.
+  </Card>
+</Columns>
+
+## Import Existing Documentation
+
+Bring in docs from GitHub, Notion, or via API.
+
+<CodeGroup tabs="GitHub,cURL">
+  ```bash
+  # Link your GitHub repo in dashboard settings
+  # PORMAZION auto-syncs Markdown files
+  ```
+  ````bash
+  curl -X POST https://api.example.com/v1/spaces/{spaceId}/import \
+    -H "Authorization: Bearer YOUR_API_KEY" \
+    -H "Content-Type: application/json" \
+    -d '{
+      "source": "github",
+      "repo": "user/project-docs",
+      "branch": "main"
+    }'
+  ````
+</CodeGroup>
+
+## Next Steps
+
+<Columns cols={2}>
+  <Card title="Customization" icon="brush" href="/configuration">
+    Learn advanced theming and layouts.
+  </Card>
+  <Card title="Collaboration" icon="users" href="/authentication">
+    Invite team members and manage permissions.
+  </Card>
+</Columns>
+
+<Callout kind="success">
+
+Congratulations! You've set up PORMAZION. Explore your space and start documenting.
+
+</Callout>

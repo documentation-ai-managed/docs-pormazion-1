@@ -1,0 +1,125 @@
+---
+title: Changelog
+description: Track the latest updates, improvements, and fixes in PORMAZION to stay informed about new features and changes.
+---
+
+## Recent Updates
+
+Stay current with PORMAZION's evolution. Review the latest releases below to understand new capabilities, fixes, and any required actions for your documentation projects.
+
+<Update label="2024-10-15" description="v1.2.0" tags={["feature", "improvement"]}>
+
+## New Features
+
+- Added real-time collaboration for multiple users on the same document
+- Introduced advanced search with full-text indexing and filters
+
+## Improvements
+
+- Enhanced page rendering speed by `>30%` for large documentation sites
+- Improved mobile responsiveness for all UI components
+
+## Bug Fixes
+
+- Fixed document export issues with embedded images
+- Resolved authentication token refresh errors during long sessions
+
+</Update>
+
+<Update label="2024-09-20" description="v1.1.0" tags={["feature", "bugfix"]}>
+
+## New Features
+
+- Integrated version history with diff viewer for tracking changes
+- Added custom themes and branding options for your docs space
+
+## Bug Fixes
+
+- Corrected sidebar navigation glitches on project switching
+- Patched security vulnerability in public page sharing (CVE-2024-XXXX)
+
+## Improvements
+
+- Optimized database queries for `>50%` faster project loading
+
+</Update>
+
+<Update label="2024-08-10" description="v1.0.0" tags={["breaking", "feature"]}>
+
+## New Features
+
+- Core documentation workspace with project organization and MDX support
+- Full-text editor with live preview and syntax highlighting
+- API access for programmatic document management
+
+## Breaking Changes
+
+- Updated authentication flow to use JWT tokens instead of sessions
+- Removed legacy YAML frontmatter parser in favor of strict MDX validation
+
+</Update>
+
+## Migration Guide
+
+If you encounter issues after upgrading, follow these steps to migrate smoothly.
+
+<Steps>
+  <Step title="Backup Your Data" icon="database">
+
+    Export all projects via the dashboard.
+
+    ```
+    curl -X POST https://api.example.com/v1/export \
+      -H "Authorization: Bearer YOUR_API_KEY" \
+      -d '{"projectId": "proj_123"}'
+    ```
+
+  </Step>
+  <Step title="Update Tokens" icon="key">
+
+    Regenerate JWT tokens in your settings.
+
+  </Step>
+  <Step title="Test MDX Pages" icon="file-text">
+
+    Validate frontmatter and escape special characters like `{` and `<`.
+
+  </Step>
+  <Step title="Deploy Changes" icon="upload">
+
+    Push updates to your production environment.
+
+  </Step>
+</Steps>
+
+<Callout kind="alert">
+
+**Breaking Change in v1.0.0:** Session-based auth is deprecated. Migrate to JWT tokens immediately to avoid disruptions. See the [migration guide](#migration-guide) above.
+
+</Callout>
+
+## Upcoming Features
+
+Exciting enhancements are on the horizon. Here's a preview of what's coming next.
+
+<Columns cols={3}>
+  <Card title="AI Assistant" icon="bot" href="/docs/ai-features">
+    Automated content generation and summaries for your docs.
+  </Card>
+  <Card title="Advanced Analytics" icon="bar-chart-3" href="/docs/analytics">
+    Track document views, engagement, and user behavior.
+  </Card>
+  <Card title="Webhooks" icon="zap" href="/docs/webhooks">
+    Real-time notifications for document changes.
+  </Card>
+</Columns>
+
+<Expandable title="Detailed Roadmap" default-open="false">
+
+Review the full roadmap on our GitHub repository. Key milestones include:
+
+- Q4 2024: Multi-language support
+- Q1 2025: Enterprise SSO integration
+- Q2 2025: Offline editing mode
+
+</Expandable>
